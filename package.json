@@ -1,0 +1,17 @@
+{
+  "name": "event_planner",
+  "version": "1.0.0",
+  "description": "A Pen created at CodePen.io. You can find this one at https://codepen.io/nolakat/pen/4baa31f41a37e947fe4c11ec80138e93.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}

@@ -1,0 +1,209 @@
+$huemor--orange: #F0672F;
+
+
+a:hover{
+  cursor: none;
+}
+
+.page-transition{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index:999;
+  background: orange;
+  width: 100vw;
+  height: 100vh;
+  display:none;
+}
+
+html{
+  cursor: none;
+}
+
+body{
+  background: #EFCEC5;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content:center;
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+
+.st0{fill:none;stroke:lightcoral;}
+.st1{fill: #EFCEC5;}
+.st2{fill: red;
+}
+
+
+#svg-pointer{
+  top:0px;
+  left: -5px;
+  position: fixed;
+  pointer-events: none;
+
+  
+  circle{
+  transition: all 1s ease;
+  fill: lightcoral;
+  position: static;
+  }
+}
+
+.container{
+  width: fit-content;
+  height: 155px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  transform: scale(.5);
+  border: 2px solid orange;
+  
+  h5{
+    text-transform: uppercase;
+    align-self: center;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    color: lightcoral;
+    text-align: center;
+
+  }
+
+  svg#night {
+    position: absolute;
+    top: -350px;
+    align-self: center;
+    justify-self: center;
+    left: -10px;
+    transform: scale(1.5);
+    display: block;
+}
+
+  &:hover{
+
+    .box{
+    box-shadow: 0px 2px 15px 2px darken(#EFCEC5, 15%);
+    transition: box-shadow 1s ease;
+    }
+    
+    
+    #rocket{
+      top: 15px;
+      animation:flight 2s ease;
+      animation-duration: .5s;
+      animation-delay: .25s;
+      animation-iteration-count: infinite;
+
+      .exhaust{
+        stroke: purple;
+        stroke-dashoffset: 0;
+        transition: stroke-dashoffset 1s ease-in;
+
+
+      }
+    }
+    
+    #cloud2{
+        animation: cloud 2.4s linear;
+      animation-iteration-count: infinite;
+    }
+    
+    #cloud1{
+      animation: cloud 2.4s linear;
+      animation-iteration-count: infinite;
+    }
+
+    svg#night {
+      position: absolute;
+      top: 50px;
+      align-self: center;
+      justify-self: center;
+      transition: all 2s ease;
+   
+  }
+  }
+  
+    &:active{
+      .box{
+      box-shadow: 0px 5px 15px 2px darken(#EFCEC5, 25%);
+      }
+    }
+}
+
+
+
+.box{
+  transition: box-shadow 1s ease;
+  box-shadow: 0px 2px 2px 2px darken(#EFCEC5, 8%);
+  background: lightcoral;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 150px;
+  position: relative;
+  overflow: hidden;
+  
+  #rocket{
+    top: 0px;
+    position: relative;
+    transition: all 1s ease-in;
+  }
+  
+  
+  #cloud-wrap{
+    top: -50px;
+    width: 150px;
+    position: absolute;
+  }
+  
+  #cloud2{
+    position: absolute;
+    opacity: .9;
+    float:right;
+    right: 10px;
+  }
+
+  #cloud1{
+  float:left;
+  left: -20px;
+  opacity: .9;
+  position:relative;
+}
+  
+ 
+}
+
+@keyframes cloud{
+  0%{
+    top: -50px;
+  }
+  
+  100%{
+    top: 200px;
+  }
+}
+
+@keyframes flight{
+  0%{
+    left: 0px;
+  }
+  
+  25%{
+    left: -2px;
+  }
+  
+  50%{
+    left: 2px;
+  }
+  
+  100%{
+    left: 0px;
+  }
+}
+
+  
+
